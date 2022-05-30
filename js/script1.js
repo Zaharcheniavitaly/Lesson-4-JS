@@ -6,6 +6,8 @@
 
 
 
+//es5
+
 function Product(name, price) {
 	this.name = name;
 	this.price = price;
@@ -22,4 +24,20 @@ product2.make25PercentDiscount();
 console.log(product2);
 
 
+//es6
+class Prod {
+	constructor(name, price) {
+		this.name = name;
+		this.price = price;
+	}
+	make25PercentDiscount() {
+		this.price = this.price - (this.price * 0.25);
+	}
+}
 
+
+let product3 = new Prod('prod3', prompt('Введите цену товара'));
+
+product3.make25PercentDiscount();
+
+console.log(product3);
