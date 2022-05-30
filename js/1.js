@@ -5,19 +5,21 @@
 */
 
 
-/*
+
 function Product(name, price) {
 	this.name = name;
 	this.price = price;
 }
 Product.prototype.make25PercentDiscount = function () {
-	console.log(this.name, this.price);
+	let product2 = new Product(newname, (this.price - (this.price * 0.25));
+
 };
 
-let product2 = new Product(newname, (price - (price * 0.25));
+
 
 
 product2.make25PercentDiscount();
-*/
+console.log(this.name, this.price);
 
-console.log('ghgjg');
+
+
