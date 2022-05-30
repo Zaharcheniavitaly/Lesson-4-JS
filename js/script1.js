@@ -11,15 +11,15 @@ function Product(name, price) {
 	this.price = price;
 }
 Product.prototype.make25PercentDiscount = function () {
-	let product2 = new Product(newname, (this.price - (this.price * 0.25));
+	this.price = this.price - (this.price * 0.25);
 
 };
 
-
-
+let product2 = new Product('prod2', prompt('Введите цену товара'));
 
 product2.make25PercentDiscount();
-console.log(this.name, this.price);
+
+console.log(product2);
 
 
 
