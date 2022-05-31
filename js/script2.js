@@ -7,3 +7,34 @@
 Объекты типа AttachedPost должны иметь метод makeTextHighlighted, который будет назначать свойству highlighted значение true.
 */
 
+// es5
+
+function Post(author, text, date) {
+	this.author = author;
+	this.text = text;
+	this.date = date;
+}
+Post.prototype.edit = function (text) {
+	this.text = text;
+};
+
+function AttachedPost(author, text, date) {
+	Post.call(this, author, text, date);
+	this.highlighted = false;
+}
+AttachedPost.prototype = Object.create(Post.prototype);
+AttachedPost.prototype.constructor = AttachedPost;
+
+AttachedPost.prototype.makeTextHighlighted = function () {
+	this.highlighted = true;
+
+};
+
+let attachedPost_2 = new AttachedPost('author2', 'text2', 'date2');
+console.log(attachedPost_2);
+attachedPost_2.makeTextHighlighted();
+attachedPost_2.edit('новое значение');
+
+
+
+
