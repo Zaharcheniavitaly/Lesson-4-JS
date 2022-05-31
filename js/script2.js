@@ -27,13 +27,13 @@ AttachedPost.prototype.constructor = AttachedPost;
 
 AttachedPost.prototype.makeTextHighlighted = function () {
 	this.highlighted = true;
-
 };
 
-let attachedPost_2 = new AttachedPost('author2', 'text2', 'date2');
+let attachedPost_2 = new AttachedPost('author2', 'text2', new Date());
 console.log(attachedPost_2);
 attachedPost_2.makeTextHighlighted();
 attachedPost_2.edit('новое значение');
+console.log(attachedPost_2);
 
 
 
